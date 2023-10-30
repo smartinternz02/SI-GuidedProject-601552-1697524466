@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background: black;
+            color: #fff;
+        }
+        #header{
+            width: 100%;
+            height: 100vh;
+            background-image: url("bk1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            padding: 10px 10%;
+        
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+        .logo{
+            width: 140 px;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav ul li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position:absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            padding-right: 40px;
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+        
+            
+            
+        }
+        img{
+            border-radius: 30px;
+        }
+        
+        .header-text h1 span{
+            color: #ff004f;
+        }
+        .side{
+            padding: 60px;
+        }
+        .button{
+            height: 40px;
+            width: 120px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h1 style="color: #ff004f;">Happiness</h1>
+            <ul id="sidemenu">
+                    <li ><a style="color: #ff004f;" href="templates/Happy.html">HOME</a></li>
+                    <li ><a style="color: #ff004f;"href="#ABOUT">ABOUT</a></li>
+                    
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTiC3u3YMirbJmPkcaYDC8OvPuOJYRneO2hR8wAV5bq6_k-4s_r" alt="" height="500px" width="500px">
+            <div class="side">
+                <h1 style="color: #fff;">Smiling Can Trick Your Brain Into Happiness</h1>
+                <br>
+                <h3 style="color: #fff;">Boost your Health</h3>
+                <br>
+                <h4 style="color: #fff;">Ever had someone tell you to cheer up and smile? It's propbably not the most welcomed advice, especially when you're feeling sick, tired or just plain down in the dumps. But there's actually good reason to turn that frown upside down, corny as it sounds. Science has shown that the mere act of smiling can lift your mood, lower stress, boost your immune system and possibly even prolong your life.</h4>
+                <br>
+                <br>
+                <form action="{{ url_for('happy')}}" method="post">
+                    <button style="background-color: #ff004f;" class="button"  href="templates/Happy.html">
+                        Get Started
+                    </button>
+                </form>
+                <!-- <a href="Happy.html" action="{{ url_for('happy')}}" method="post">
+                    <button style="background-color: #ff004f;" class="button"  href="templates/Happy.html">
+                        Get Started
+                    </button>
+                </a> -->
+                
+            </div>
+            
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

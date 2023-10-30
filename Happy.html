@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the form container */
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+
+        /* Style for form row, containing two cells */
+        .form-row {
+            display: flex;
+            
+            margin-bottom: 10px;
+            
+            
+        }
+
+        /* Style for form input fields */
+        .form-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+            
+        }
+
+        /* Style for the submit button */
+        .form-submit {
+            background-color: #19b619;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #29bed1;">
+    
+    <div class="form-container">
+        <form action="{{ url_for('result')}}" method="post">
+            <div class="form-row">
+                <input type="text" class="form-input" name='Country' placeholder="Country" >
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Region' placeholder="Region">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Happiness Score' placeholder="Happiness Score">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Standard Error' placeholder="Standard Error">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Economy (GDP per capita)' placeholder="Economy (GDP per capita)">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Family' placeholder="Family">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Health (Life Expectancy)' placeholder="Health (Life Expectancy)">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Freedom' placeholder="Freedom">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Trust (Government Corruption)' placeholder="Trust (Government Corruption)">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Generosity' placeholder="Generosity">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name="Dystopia Residual" placeholder="Dystopia Residual">
+            </div>
+            <input type="submit" class="form-submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
